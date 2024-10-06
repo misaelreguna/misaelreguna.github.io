@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!----Font awesome cdn  font icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+     <div class="hero-header">
+        <header>
+            <div class="logo">
+                <div class="frame-logo">
+                     <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                 </div>
+                <div class="logo-text">El~Portofolio</div>
+            </div>
+            <nav>
+                <div class="togglebtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="navlinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Resume</a></li>
+                    <li><a href="#">Project</a></li>
+                    <li><a href="#">Certificate</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="wrapper">
+            
+            <div class="container">
+                 <div class="hero-pic">
+                    <img src="images/misael baru hitam.png" alt="profile pic">
+                 </div>
+                 <div class="hero-text">
+                    <h5>Hi I'm <span class="input">Backend Developer</span></h5>
+                    <h1>Misael Reguna</h1>
+                    <p> Perkenalkan saya adalah seorang website developer dengan pengalaman magang sekitar satu tahun. Sebagai seorang website
+                        developer saya mampu membuat website yang interaktif dan juga menarik. Hubungi saya jika anda ingin tahu lebih dalam
+                        tentang saya
+                    </p>
+
+                    <div class="btn-group">
+                       <a href="#" class="btn active">Download CV</a>
+                       <a href="https://wa.me/628985304289" class="btn">Contact</a>
+                    </div>
+
+                    <div class="social">
+                        <a href="https://wa.link/yrmmxv"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/misaelreguna/"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                 </div>
+            </div>
+        </div>
+     </div>
+     <!---typed js for typing text effect-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+     <script>
+        /** creating button click show hide navbar **/
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed=new Typed(".input",{
+            strings:["BackEnd Developer","Frontend Developer","Web Developer"],
+            typedSpeed:70,
+            backSpeed:55,
+            loop:true
+        })
+     </script>
+</body>
+</html>
