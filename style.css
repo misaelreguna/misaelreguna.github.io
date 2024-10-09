@@ -336,8 +336,29 @@ section{
 }
 
 @media (max-width:395px) {
+    body{
+        overflow-x: hidden;
+    }
     .hero-text h1{
         font-size: 2.7rem;
+    }
+    .container .hero-pic{
+        margin-top: -45px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 15px solid #444;
+        box-shadow: 5px 7px 25px rgba(0,0,0,0.5);
+    }
+    .hero-pic img{
+        height: 100%;
+        width:100%;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    .hero-pic img:hover{
+        transform: scale(1.123);
     }
 }
 
@@ -354,8 +375,12 @@ section{
     }
 }
 
-@media (max-width:400px) {
+/* mobile about */
+@media (max-width:500px) {
      .about{
+        overflow-x:hidden ;
+        min-height: 100vh;
+        margin-top: 0px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -377,9 +402,12 @@ section{
         transition: none;
         position: relative;
     }
-    .about_image .main{
+    .about_image .main,
+    .about_image .main:hover{
         padding: 0 30px;
         box-shadow: none;
+        transform: none;
+        transition: none;
     }
     .about_image .about_small {
         position: absolute;
