@@ -150,7 +150,6 @@ nav .navlinks li a:active{
     /* padding-left: -1px; */
     margin-left: -2.6px;
     transition: 1.5s ease-in-out;
-
 }
 .hero-text p{
     color:#e5e5e5;
@@ -335,7 +334,7 @@ section{
     }
 }
 
-@media (max-width:395px) {
+/* @media (max-width:395px) {
     body{
         overflow-x: hidden;
     }
@@ -360,7 +359,7 @@ section{
     .hero-pic img:hover{
         transform: scale(1.123);
     }
-}
+} */
 
 @media (max-width:360px) {
     .hero-text h1{
@@ -377,6 +376,34 @@ section{
 
 /* mobile about */
 @media (max-width:500px) {
+    body{
+        overflow-x: hidden;
+    }
+    .hero-text h1{
+        font-size: 2.7rem;
+        color: #007ced;
+        /* padding-left: -1px; */
+        margin-left: -2.6px;
+        transition: 1.5s ease-in-out;
+    }
+    .container .hero-pic{
+        margin-top: -45px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 15px solid #444;
+        box-shadow: 5px 7px 25px rgba(0,0,0,0.5);
+    }
+    .hero-pic img{
+        height: 100%;
+        width:100%;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    .hero-pic img:hover{
+        transform: scale(1.123);
+    }
      .about{
         overflow-x:hidden ;
         min-height: 100vh;
