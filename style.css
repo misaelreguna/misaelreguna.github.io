@@ -4,6 +4,15 @@
     margin: 0;
     font-family: poppins,sans-serif;
     text-decoration: none;
+    scroll-behavior: smooth;
+    color:#e5e5e5;
+    font-family: 'Quicksand';
+
+}
+:root{
+    --hitam-gray-color:#1A3636;
+    --hijau-gelap-color:#1A3636;
+    --biru-gelap-color:#1e2d37;
 }
 body{
     overflow-x: hidden;
@@ -16,16 +25,16 @@ body{
     min-height: 100vh;
     background: #222;
 }
-.wrapper{
+.home{
     width:1280px;
     max-width: 95%;
     margin: 0 auto;
     padding: 0 20px;
-    padding-top: 120px;
+    padding-top: 150px;
 }
 header{
     width:100%;
-    padding: 40px 100px 30px;
+    padding: 40px 140px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;    
@@ -33,13 +42,13 @@ header{
     position: fixed; 
     z-index: 2;
     background-color: #222;
+    /* backdrop-filter:blur(7px); */
 }
 .logo{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-}
-
+}   
 .logo .frame-logo{
     width: 49px;
     height: 49px;
@@ -79,8 +88,7 @@ nav .togglebtn span{
     width:100%;
     height:3px;
     transition: 0.3s;
-    transition-property:  transform, opacity;
-
+    transition-property: transform, opacity;
 }
 nav .navlinks{
     list-style-type: none;
@@ -91,10 +99,14 @@ nav .navlinks li{
 nav .navlinks li a{
      color:#e5e5e5;
      margin-right: 2.5rem;
+     padding-bottom: 3px;
 }
-nav .navlinks li a:hover{
+nav .navlinks li a:hover,
+nav .navlinks li a:active{
     color: #007ced;
+    border-bottom: 3px solid #007ced;
 }
+
 .container {
     display: flex;
     justify-content: space-around;
@@ -113,6 +125,7 @@ nav .navlinks li a:hover{
     height: 100%;
     width:100%;
     transition: 0.5s;
+    cursor: pointer;
 }
 .hero-pic img:hover{
     transform: scale(1.123);
@@ -121,6 +134,7 @@ nav .navlinks li a:hover{
     max-width: 500px;
     display: flex;
     flex-direction: column;
+    /* transition: 1.5s ease-in-out; */
 }
 .hero-text h5{
     color:#e5e5e5;
@@ -135,6 +149,8 @@ nav .navlinks li a:hover{
     font-size: 3rem;
     /* padding-left: -1px; */
     margin-left: -2.6px;
+    transition: 1.5s ease-in-out;
+
 }
 .hero-text p{
     color:#e5e5e5;
@@ -152,11 +168,18 @@ nav .navlinks li a:hover{
     margin-right:7px;
     border-radius: 30px;
     border:2px solid #e5e5e5;
-    box-shadow:  0 10px 10px -8px rgb(0 0 0 / 78%);
+    /* box-shadow:  0 10px 10px -8px rgb(0 0 0 / 78%); */
+}
+.btn:hover{
+    box-shadow: 0 0 20px #ffffff ;
 }
 .btn.active{
     border-color: #007ced;
 }
+.btn.active:hover{
+    box-shadow: 0 0 20px #007ced ;
+}
+
 .hero-text .social i{
     color: #e5e5e5;
     font-size: 18px;
@@ -168,14 +191,85 @@ nav .navlinks li a:hover{
     transform: rotate(360deg);
 }
 
+/* about */
+section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 9.27%;
+}
+ 
+.about{
+    gap: 290px;
+    margin-top: 120px;
+    background-color: var(--biru-gelap-color);
+    min-height: 83vh;
+    display: flex;
+}
+
+.about_image{
+    width: 50%;
+    position: relative;
+}
+.about_image img{
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgb(105, 157, 253);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.about_image img:hover{
+    transform: scale(1.123);
+}
+
+.about_image .about_small-1{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 70%;
+    object-fit: cover;
+    left:-15%;
+    z-index: 1;
+}
+
+.about_image .about_small{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: -14%;
+    object-fit: cover;
+    left:70%;
+}
+
+.about_content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;  
+    justify-content: flex-start;
+    gap: 10px;
+    text-align: justify;
+}
+
+.about_content h1{
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: 'Quicksand';
+}
+.content2{
+    display: none;
+}
 /* Costum Scroll Bar */
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
     width: 15px;
 }
 
 ::-webkit-scrollbar-track{
     background: #222;   
-}
+} */
 
 /* Respnosiv design & displaying navbar for small screen */
 @media(max-width:930px)
@@ -257,5 +351,60 @@ nav .navlinks li a:hover{
     header{
         direction: flex;
         padding-left: 9%;
+    }
+}
+
+@media (max-width:400px) {
+     .about{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px; /* Sesuaikan jarak antara gambar dan teks */
+    }
+
+    .about_image,
+    .about_content {
+        display: flex;
+        width: 100%;
+        text-align: center; /* Agar teks berada di tengah */
+    }
+    section .about_image{
+        display: flex;
+        width: 0%;
+        height: auto;
+        margin-right: 400px;
+        transform: none;
+        transition: none;
+        position: relative;
+    }
+    .about_image .main{
+        padding: 0 30px;
+        box-shadow: none;
+    }
+    .about_image .about_small {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        left: 10px;
+    }
+    .about_image .about_small-1{
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        top: 90%;
+        left: 320px;
+    }
+    .about_content h1{
+        font-size: 2rem;
+    }
+    .about_content p{
+        display: none;
+    }
+    .content2{
+        width: 100%;
+        display: flex;
+        flex-direction: column;  
+        justify-content: flex-start;
+        text-align: justify;
     }
 }

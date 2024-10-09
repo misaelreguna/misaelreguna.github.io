@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="style.css">
     <!----Font awesome cdn  font icon css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- HERO HEADER & NAV -->
      <div class="hero-header">
         <header>
             <div class="logo">
@@ -25,16 +29,16 @@
                     <span></span>
                 </div>
                 <ul class="navlinks">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Resume</a></li>
-                    <li><a href="#">Project</a></li>
-                    <li><a href="#">Certificate</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#certificate">Certificate</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
-        <div class="wrapper">
-            
+        <!-- HOME -->
+        <div class="home" id="home">
             <div class="container">
                  <div class="hero-pic">
                     <img src="images/misael baru hitam.png" alt="profile pic">
@@ -44,7 +48,7 @@
                     <h1>Misael Reguna</h1>
                     <p> Perkenalkan saya adalah seorang website developer dengan pengalaman magang sekitar satu tahun. Sebagai seorang website
                         developer saya mampu membuat website yang interaktif dan juga menarik. Hubungi saya jika anda ingin tahu lebih dalam
-                        tentang saya
+                        tentang saya.
                     </p>
 
                     <div class="btn-group">
@@ -62,6 +66,23 @@
             </div>
         </div>
      </div>
+
+     <!-- ABOUT  -->
+     <section class="about" id="about">
+        <div class="about_content">
+            <h1>ABOUT ME</h1>
+            <p>Halo saya Misael seorang programmer asal Jakarta. Saya adalah seorang Web Developer yang sudah memiliki pengalaman magang sekitar satu tahun. Ketertarikan saya terhadap dunia coding sudah ada sejak umur masih belasan tahun. Saat duduk di bangku SMK saya terbilang cukup aktif dalam mengikuti kegiatan lomba.Ada yang lolos grandfinal ada juga yang nggak hehee.. Namanya juga coba-coba wkwk artinya disini saya memiliki jiwa pantang menyerah.  </p>
+            <!-- <button>Show My Skills</button> -->
+        </div>
+        <div class="about_image">
+            <img src="images/poto kaca 2.jpeg" alt="misael image" class="about_small-1 bawah"> <!--jika di mobile maka poto yang bawah-->
+            <img src="images/gmbr1.jpeg" alt="misael image" class="main">
+            <img src="images/poto kaca.jpeg" alt="misael image" class="about_small atas"> <!--jika di mobile maka poto yang atas-->
+        </div>
+        <div class="content2">
+            <p>Halo saya Misael seorang programmer asal Jakarta. Saya adalah seorang Web Developer yang sudah memiliki pengalaman magang sekitar satu tahun. Ketertarikan saya terhadap dunia coding sudah ada sejak umur masih belasan tahun. Saat duduk di bangku SMK saya terbilang cukup aktif dalam mengikuti kegiatan lomba.Ada yang lolos grandfinal ada juga yang nggak hehee.. Namanya juga coba-coba wkwk artinya disini saya memiliki jiwa pantang menyerah.  </p>
+        </div>
+     </section>
      <!---typed js for typing text effect-->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
      <script>
@@ -81,6 +102,32 @@
             backSpeed:55,
             loop:true
         })
+     </script>
+
+     <script>
+        window.addEventListener('scroll', function() {
+  // Dapatkan semua elemen section
+  const sections = document.querySelectorAll('section');
+  // Dapatkan tinggi viewport
+  const scrollPos = window.scrollY + 100; // Tambahkan sedikit offset agar lebih responsif
+  
+  // Loop melalui setiap section
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    
+    // Cek jika posisi scroll berada dalam jarak section tertentu
+    if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+      // Hapus class active dari semua link
+      document.querySelectorAll('nav .navlinks li a').forEach(nav => nav.classList.remove('active'));
+      
+      // Tambahkan class active pada link yang sesuai
+      const activeNav = document.querySelector(`nav .navlinks li a[href="#${section.id}"]`);
+      activeNav.classList.add('active');
+    }
+  });
+});
+
      </script>
 </body>
 </html>
