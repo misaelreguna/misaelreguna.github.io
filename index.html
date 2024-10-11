@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- link js animasi ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     <!-- HERO HEADER & NAV -->
@@ -105,6 +108,7 @@
      </script>
 
      <script>
+        //Berguna untuk membuat navbar menjadi hidup/active saat berada di posisi atau scroll tertentu
         window.addEventListener('scroll', function() {
   // Dapatkan semua elemen section
   const sections = document.querySelectorAll('section');
@@ -127,7 +131,24 @@
     }
   });
 });
+     </script>
 
+     <script>
+        //berguna untuk membuat animasi scroll reveal atau animasi kiri-kanan object
+        const scrollRevealOption = {
+        distance: "100px",
+        origin: "bottom",
+        duration: 1000,
+        easing: "ease-in-out",
+        reset: true,
+};
+        ScrollReveal().reveal(".hero-text", {
+        origin: "right",
+        distance: "10px",
+        duration: 1000,
+        easing: "ease-in-out",
+        reset: true,
+        });
      </script>
 </body>
 </html>

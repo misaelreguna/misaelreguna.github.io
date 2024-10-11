@@ -149,7 +149,7 @@ nav .navlinks li a:active{
     font-size: 3rem;
     /* padding-left: -1px; */
     margin-left: -2.6px;
-    transition: 1.5s ease-in-out;
+    transition: 1.2s ease-in-out;
 }
 .hero-text p{
     color:#e5e5e5;
@@ -320,8 +320,6 @@ section{
     nav .navlinks.open{
         right:0;
     }
-
-
 }
 @media(max-width:768px)
 {
@@ -379,12 +377,16 @@ section{
     body{
         overflow-x: hidden;
     }
+    header{
+        direction: flex;
+        padding-left: 9%;   
+    }
     .hero-text h1{
         font-size: 2.7rem;
         color: #007ced;
         /* padding-left: -1px; */
         margin-left: -2.6px;
-        transition: 1.5s ease-in-out;
+        /* transition: 1.5s ease-in-out; */
     }
     .container .hero-pic{
         margin-top: -45px;
@@ -399,7 +401,6 @@ section{
         height: 100%;
         width:100%;
         transition: 0.5s;
-        cursor: pointer;
     }
     .hero-pic img:hover{
         transform: scale(1.123);
@@ -408,6 +409,7 @@ section{
         overflow-x:hidden ;
         min-height: 100vh;
         margin-top: 0px;
+        padding-top: 120px;
         display: flex;
         flex-direction: column;
         align-items: center;
