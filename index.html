@@ -44,7 +44,7 @@
         <div class="home" id="home">
             <div class="container">
                  <div class="hero-pic">
-                    <img src="images/misael baru hitam.png" alt="profile pic">
+                    <img src="images/misael baru hitam.png" alt="profile pic" >
                  </div>
                  <div class="hero-text">
                     <h5>Hi I'm <span class="input">Backend Developer</span></h5>
@@ -133,8 +133,10 @@
 });
      </script>
 
+
+<!-- //berguna untuk membuat animasi scroll reveal atau animasi kiri-kanan object -->
      <script>
-        //berguna untuk membuat animasi scroll reveal atau animasi kiri-kanan object
+        // berguna untuk membuar nilai awal atau default pada scrollreveal
         const scrollRevealOption = {
         distance: "100px",
         origin: "bottom",
@@ -142,13 +144,92 @@
         easing: "ease-in-out",
         reset: true,
 };
-        ScrollReveal().reveal(".hero-text", {
-        origin: "right",
-        distance: "10px",
+function setupScrollReveal(){
+if (window.innerWidth <= 768) {
+    ScrollReveal().reveal(".hero-text", {
+        origin: "left", // Muncul dari bawah untuk mobile
+        distance: "50px",
+        duration: 800,
+        easing: "ease-in",
+        reset: true, // Animasi hanya terjadi sekali di mobile
+    });
+    
+    ScrollReveal().reveal(".hero-pic", {
+        origin: "top", // Muncul dari bawah untuk mobile
+        distance: "50px",
+        duration: 800,
+        easing: "ease-in",
+        reset: true, // Animasi hanya terjadi sekali di mobile
+    });
+
+    ScrollReveal().reveal(".about_content h1 ", {
+        origin: "top", // Muncul dari bawah untuk mobile
+        distance: "50px",
+        duration: 800,
+        easing: "ease-in",
+        reset: true, // Animasi hanya terjadi sekali di mobile
+    });
+    ScrollReveal().reveal(".main, .atas, .bawah", {
+        origin: "left", // Muncul dari bawah untuk mobile
+        distance: "50px",
+        duration: 800,
+        easing: "ease-in",
+        reset: true, // Animasi hanya terjadi sekali di mobile
+    });
+    ScrollReveal().reveal(".bawah", {
+        origin: "right", // Muncul dari bawah untuk mobile
+        distance: "50px",
+        duration: 800,
+        easing: "ease-in",
+        reset: true, // Animasi hanya terjadi sekali di mobile
+    });
+} else {
+    ScrollReveal().reveal(".hero-text", {
+        origin: "right", // Muncul dari kanan di desktop
+        distance: "100px",
         duration: 1000,
         easing: "ease-in-out",
         reset: true,
-        });
+    });
+
+    ScrollReveal().reveal(".hero-pic", {
+        origin: "left", // Muncul dari kanan di desktop
+        distance: "100px",
+        duration: 1000,
+        easing: "ease-in-out",
+        reset: true,
+    }); 
+    ScrollReveal().reveal(".about_content h1", {
+        origin: "left", // Muncul dari kanan di desktop
+        distance: "100px",
+        duration: 1000,
+        easing: "ease-in-out",
+        reset: true,
+    });
+
+    ScrollReveal().reveal(".about_content p", {
+        origin: "right", // Muncul dari kanan di desktop
+        distance: "100px",
+        duration: 1000,
+        easing: "ease-in-out",
+        reset: true,
+    });
+
+    ScrollReveal().reveal(".about_image", {
+        origin: "bottom", // Muncul dari kanan di desktop
+        distance: "100px",
+        duration: 1000,
+        easing: "ease-in",
+        reset: true,
+    });
+}
+}
+
+// Panggil fungsi saat halaman dimuat
+window.onload = setupScrollReveal;
+
+// Panggil fungsi saat ukuran jendela berubah
+window.onresize = setupScrollReveal;
      </script>
 </body>
 </html>
