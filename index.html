@@ -142,24 +142,24 @@
         origin: "bottom",
         duration: 1000,
         easing: "ease-in-out",
-        reset: true,
+        reset: false,
 };
 function setupScrollReveal(){
 if (window.innerWidth <= 768) {
     ScrollReveal().reveal(".hero-text", {
         origin: "left", // Muncul dari bawah untuk mobile
-        distance: "50px",
+        distance: "30px",
         duration: 800,
         easing: "ease-in",
-        reset: true, // Animasi hanya terjadi sekali di mobile
+        reset: false, // Animasi hanya terjadi sekali di mobile
     });
     
     ScrollReveal().reveal(".hero-pic", {
         origin: "top", // Muncul dari bawah untuk mobile
-        distance: "50px",
+        distance: "10px",
         duration: 800,
         easing: "ease-in",
-        reset: true, // Animasi hanya terjadi sekali di mobile
+        reset: false, // Animasi hanya terjadi sekali di mobile
     });
 
     ScrollReveal().reveal(".about_content h1 ", {
@@ -167,21 +167,21 @@ if (window.innerWidth <= 768) {
         distance: "50px",
         duration: 800,
         easing: "ease-in",
-        reset: true, // Animasi hanya terjadi sekali di mobile
+        reset: false, // Animasi hanya terjadi sekali di mobile
     });
     ScrollReveal().reveal(".main, .atas, .bawah", {
         origin: "left", // Muncul dari bawah untuk mobile
         distance: "50px",
         duration: 800,
         easing: "ease-in",
-        reset: true, // Animasi hanya terjadi sekali di mobile
+        reset: false, // Animasi hanya terjadi sekali di mobile
     });
     ScrollReveal().reveal(".bawah", {
         origin: "right", // Muncul dari bawah untuk mobile
         distance: "50px",
         duration: 800,
         easing: "ease-in",
-        reset: true, // Animasi hanya terjadi sekali di mobile
+        reset: false, // Animasi hanya terjadi sekali di mobile
     });
 } else {
     ScrollReveal().reveal(".hero-text", {
