@@ -16,7 +16,7 @@
 }
 body{
     overflow-x: hidden;
-    min-height: 200vh; /* 200% dari tinggi layar, jadi bisa scroll */
+    /* min-height: 200vh;  */
     background: #222;
 }
 .hero-header{
@@ -167,7 +167,7 @@ nav .navlinks li a:active{
     margin-right:7px;
     border-radius: 30px;
     border:2px solid #e5e5e5;
-    /* box-shadow:  0 10px 10px -8px rgb(0 0 0 / 78%); */
+    box-shadow:  0 10px 10px -8px rgb(0 0 0 / 78%);
 }
 .btn:hover{
     box-shadow: 0 0 20px #ffffff ;
@@ -191,20 +191,19 @@ nav .navlinks li a:active{
 }
 
 /* about */
-section{
+.about{
+    gap: 290px;
+    /* margin-top: 100px; */
+    background-color: var(--biru-gelap-color);
+    min-height: 85vh;
+    display: flex;
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5% 9.27%;
-}
- 
-.about{
-    gap: 290px;
-    margin-top: 120px;
-    background-color: var(--biru-gelap-color);
-    min-height: 83vh;
-    display: flex;
+    scroll-margin-top: 120px; /* atau sebesar tinggi header */
 }
 
 .about_image{
@@ -256,20 +255,110 @@ section{
 .about_content h1{
     font-size: 4rem;
     font-weight: 700;
-    font-family: 'Quicksand';
 }
 .content2{
     display: none;
 }
-/* Costum Scroll Bar */
-/* ::-webkit-scrollbar{
-    width: 15px;
+
+/* My Skill */
+.myskill{
+    min-height: 85vh;
+    background: #222;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0% 9.27%;
+    flex-direction: column;
+    scroll-margin-top: 120px; /* atau sebesar tinggi header */
+    /* justify-content: center; */
+}
+.myskill h1{
+    padding-top:5% ;
+    text-align: center;
+    padding-bottom: 4%;
+    font-size: 4rem;
+    font-weight: 700;
 }
 
-::-webkit-scrollbar-track{
-    background: #222;   
-} */
+    .skill-1 {
+        display: grid;
+        width:90%;
+        grid-template-columns: repeat(auto-fit,minmax(25%,1fr));
+        grid-gap: 50px;
+        /* padding: 5% 2%; */
+    }
+    .progress {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Pastikan elemen vertikal terpusat */
+        justify-content: center;
+    }
+    
+    .circular-progress{
+        position: relative;
+        height: 130px;
+        width: 130px;
+        border-radius: 50%;
+        /* background: conic-gradient(#7d2ae8 3.6deg, #ededed 0deg); */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+    .circular-progress::before{
+        content: "";
+        position: absolute;
+        height: 110px;
+        width: 110px;
+        border-radius: 50%;
+        background-color: #222;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .progress-value{
+        position: relative;
+        font-size: 40px;
+        font-weight: 600;
+        color: #bfbac7;
+        display: flex;
+        justify-content: center;
+    }
+    .progress .text{
+        font-size: 30px;
+        font-weight: 500;
+        color: #e5e5e5;
+        justify-content: center;
+        align-items: center;
+    }
 
+/*project*/
+    .project{
+        background-color: var(--biru-gelap-color);
+        min-height: 85vh;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        padding: 0% 9.27%;
+        flex-direction: column;
+        scroll-margin-top: 120px; /* atau sebesar tinggi header */
+    }
+    .project h1{
+        padding-top:5% ;
+        text-align: center;
+        padding-bottom: 4%;
+        font-size: 4rem;
+        font-weight: 700;
+    }
+
+/* .skill-2{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 50px;
+} */
 /* Respnosiv design & displaying navbar for small screen */
 @media(max-width:930px)
 {
@@ -323,6 +412,9 @@ section{
 }
 @media(max-width:768px)
 {
+    .body{
+        overflow-x: hidden;
+    }
     .container{
         flex-direction: column;
         padding-top:2rem
@@ -359,18 +451,6 @@ section{
     }
 } */
 
-@media (max-width:360px) {
-    .hero-text h1{
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width:750px) {
-    header{
-        direction: flex;
-        padding-left: 9%;
-    }
-}
 
 /* mobile about */
 @media (max-width:500px) {
