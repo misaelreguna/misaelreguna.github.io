@@ -14,6 +14,7 @@
 
         <!-- link js animasi ScrollReveal -->
         <script src="https://unpkg.com/scrollreveal"></script>
+        <link rel="icon" type="image/png" href="images/logo_bulat.ico">
     </head>
     <body>
         <!-- HERO HEADER & NAV -->
@@ -36,7 +37,7 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#myskill">My Skill</a></li>
                         <li><a href="#project">Project</a></li>
-                        <li><a href="#certificate">Certificate</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </header>
@@ -134,10 +135,84 @@
         <!-- Project -->
          <section class="project" id="project">
             <h1>Project</h1>
-            <div>
-
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">ALL</button>
+                <button class="filter-btn" data-filter="website">WEBSITE PROJECT</button>
+                <button class="filter-btn" data-filter="android">ANDROID PROJECT</button>
+                <button class="filter-btn" data-filter="wordpress">WORDPRESS</button>
+            </div>
+        
+            <div class="gallery">
+                <div class="gallery-item website">
+                    <img src="images/repo dpf.png" alt="website dpf">
+                </div>
+                <div class="gallery-item website">
+                    <img src="images/web sekolah.png" alt="website sekolah">
+                </div>
+                <div class="gallery-item website">
+                    <img src="images/web sekolah sehat.png" alt="website sekolah sehat">
+                </div>
+                <div class="gallery-item android">
+                    <img src="images/warung makan android.png" alt="android warung makan">
+                </div>
+                <div class="gallery-item wordpress">
+                    <img src="images/wordpress program ramadhan.png" alt="wordpress program ramadhan">
+                </div>
+                <div class="gallery-item wordpress">
+                    <img src="images/wordpress ajak.png" alt="wordpress ajak">
+                </div>
             </div>
          </section>
+        <!-- End Project -->
+        
+        <!-- contact -->
+          <footer class="contact" id="contact">
+              <h1>Contact</h1>
+
+            <!-- Kartu Info Kontak -->
+            <div class="contact-cards">
+              <div class="card">
+                <i class="fas fa-phone card-icon"></i>
+                <p class="card-title">Phone</p>
+                <p class="card-detail">08985304289</p>
+              </div>
+              <div class="card">
+                <i class="fas fa-envelope card-icon"></i>
+                <p class="card-title">Email</p>
+                <p class="card-detail">misaelreguna@gmail.com</p>
+              </div>
+              <div class="card">
+                <i class="fas fa-map-marker-alt card-icon"></i>
+                <p class="card-title">Address</p>
+                <p class="card-detail">Jakarta, Indonesia</p>
+              </div>
+            </div>
+        
+            <!-- Form Kontak -->
+            <form class="contact-form">
+              <div class="form-left">
+                <input type="text" name="name" placeholder="Name" required />
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="text" name="subject" placeholder="Subject" />
+              </div>
+              <div class="form-right">
+                <textarea name="message" placeholder="Message" required></textarea>
+              </div>
+            </form>
+            <button type="submit" class="btn-send">Send Message</button>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 Portfolio Misael Reguna All Rights Reserved.</p>
+                <div class="back-to-top" id="backToTop">
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+            </div>
+          </footer>
+          
+        </body>
+        </html>
+        <!-- End contact -->
+
+
 
         <!---typed js for typing text effect-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
