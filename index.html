@@ -15,6 +15,12 @@
         <!-- link js animasi ScrollReveal -->
         <script src="https://unpkg.com/scrollreveal"></script>
         <link rel="icon" type="image/png" href="images/logo_bulat.ico">
+
+        <!-- cdn flowbite -->
+        <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+
+        <!-- cdn font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">    
     </head>
     <body>
         <!-- HERO HEADER & NAV -->
@@ -166,7 +172,10 @@
         <!-- End Project -->
         
         <!-- contact -->
+         
           <footer class="contact" id="contact">
+            <!-- EDITED: Added notification container for Flowbite toast -->
+              <div id="toast-container" class="fixed top-5 right-5 z-50"></div>
               <h1>Contact</h1>
 
             <!-- Kartu Info Kontak -->
@@ -189,17 +198,21 @@
             </div>
         
             <!-- Form Kontak -->
-            <form class="contact-form">
+            <form class="contact-form" action="" id="contactForm">
               <div class="form-left">
-                <input type="text" name="name" placeholder="Name" required />
-                <input type="email" name="email" placeholder="Email" required />
-                <input type="text" name="subject" placeholder="Subject" />
+                <input type="text" name="name" id="name" placeholder="Name" required />
+                <input type="email" name="email" id="email" placeholder="Email" required />
+                <input type="text" name="subject" id="subject" placeholder="Subject" />
               </div>
               <div class="form-right">
-                <textarea name="message" placeholder="Message" required></textarea>
+                <textarea name="message" id="message" placeholder="Message" required></textarea>
+              
+              <div >
+                <button type="submit" class="btn-send">Send Message</button>
+              </div>
               </div>
             </form>
-            <button type="submit" class="btn-send">Send Message</button>
+            
             <div class="footer-bottom">
                 <p class="copyright">&copy; 2025 Portfolio Misael Reguna All Rights Reserved.</p>
                 <div class="back-to-top" id="backToTop">
@@ -207,12 +220,15 @@
                 </div>
             </div>
           </footer>
-          
+          <!-- End contact -->
+          <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
         </body>
         </html>
-        <!-- End contact -->
-
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+        <script>
+            (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="RmPTzhv6iUKCV7t5USdd4";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+            </script>
+        
 
         <!---typed js for typing text effect-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>

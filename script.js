@@ -1,3 +1,109 @@
+const firebaseConfig = {
+    apiKey: "AIzaSyAWDFfrdHph5NXI8GLIJvDCH_7YT8U8t6Y",
+    authDomain: "portofoliomisael.firebaseapp.com",
+    databaseURL: "https://portofoliomisael-default-rtdb.firebaseio.com",
+    projectId: "portofoliomisael",
+    storageBucket: "portofoliomisael.firebasestorage.app",
+    messagingSenderId: "679825659895",
+    appId: "1:679825659895:web:b94dedec7167ebdafec0f2"
+  };
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+// ADDED: Flowbite Toast Notification Function
+function showFlowbiteToast() {
+    // Create toast HTML
+    const toastHTML = `
+
+<div 
+  id="toast-success" 
+  class="flex items-center w-full max-w-xs p-4 mb-4 bg-gray-800 text-gray-200 rounded-lg shadow z-50 overflow-hidden" 
+  role="alert"
+>
+
+  <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 bg-green-500 rounded-full">
+    <svg 
+      class="w-5 h-5 text-white" 
+      aria-hidden="true" 
+      xmlns="http://www.w3.org/2000/svg" 
+      fill="currentColor" 
+      viewBox="0 0 20 20"
+    >
+      <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+    </svg>
+    <span class="sr-only">Check icon</span>
+  </div>
+  
+
+  <div class="ml-3 text-sm font-normal">
+    Message sent successfully!
+  </div>
+</div>
+    `;
+
+    // Get toast container
+    const toastContainer = document.getElementById('toast-container');
+    
+    // Insert toast HTML
+    toastContainer.innerHTML = toastHTML;
+
+    // Tambahkan class "show" agar toast bergeser masuk ke layar
+toastContainer.classList.add('show');
+
+// Jika mau hilangkan toast setelah beberapa detik:
+setTimeout(() => {
+  toastContainer.classList.remove('show');
+}, 3000); // 3 detik
+
+    // Use Flowbite's toast initialization if available
+    if (window.flowbite && window.flowbite.Toast) {
+        const toastElement = document.getElementById('toast-success');
+        new flowbite.Toast(toastElement);
+    }
+}
+// refrence to database
+var portfoliomisaelDB = firebase.database().ref("portfolioMisael");
+
+document.getElementById("contactForm").addEventListener("submit", submitForm);
+
+function submitForm(e) {
+    e.preventDefault();
+
+    var name = getElementVal("name");
+    var email = getElementVal("email");
+    var message = getElementVal("message");
+    var subject = getElementVal("subject");
+
+    saveMessages(name, email, message, subject);
+
+    // ADDED: Show toast notification
+    showFlowbiteToast();
+
+    // reset the form after submission
+    setTimeout(() => {  
+        document.getElementById("toast-container").innerHTML = ''; // Clear the toast container
+    }
+    , 3000); // Clear after 3 seconds   
+
+    // Reset form
+    document.getElementById("contactForm").reset(); 
+}
+
+const saveMessages = (name, email, message, subject) => {
+    var newMessageRef = portfoliomisaelDB.push();
+    newMessageRef.set({
+        name: name,
+        email: email,
+        message: message,
+        subject: subject,
+    });
+}
+
+const getElementVal = (id) => {
+    return document.getElementById(id).value;
+}
+
 // Fungsi untuk menganimasikan progress bar lingkaran
 function animateProgress(progressElement) {
     // Mengambil elemen yang menampilkan nilai progress (angka persen)

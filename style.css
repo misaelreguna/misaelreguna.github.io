@@ -2,7 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: poppins,sans-serif;
+    /* font-family: poppins,sans-serif; */
     text-decoration: none;
     scroll-behavior: smooth;
     color:#e5e5e5;
@@ -62,8 +62,8 @@ header{
     height: 130%;
     width:130%;
     transition: 0.5s;
-    margin-left: -7px;
-    margin-top: -6px;
+    margin-left: 0px;
+    margin-top: -12px;
 }
 
 .logo .logo-text{
@@ -497,7 +497,7 @@ nav .navlinks li a:active{
   }
 
   textarea{
-    height: 185px;
+    min-height: 100%;
   }
   /* Tombol */
   .btn-send {
@@ -509,8 +509,10 @@ nav .navlinks li a:active{
     border-radius: 6px;
     cursor: pointer;
     font-size: 1rem;
-    margin-top: 30px;
-    margin-left: 795px;
+    margin-top: 20px;
+    /* margin-left: 795px; */
+    /* margin-left: 300px; */
+    margin-left: 267.8px;
     transition: background 0.3s;
   }
   .btn-send:hover {
@@ -520,7 +522,7 @@ nav .navlinks li a:active{
   .footer-bottom {
     min-width: 1000px;
     padding-top: 2rem;
-    margin-top: 3rem;
+    margin-top: 8rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     justify-content: space-between;
@@ -547,6 +549,22 @@ nav .navlinks li a:active{
 .back-to-top:hover {
     transform: translateY(-5px);
 }
+
+#toast-container {
+    position: fixed;
+    top: 150px;
+    /* Mulai dari luar layar (misalnya -300px) */
+    right: -300px; 
+    z-index: 1000;
+    /* Durasi transisi 0.5 detik, tipe easing linear/ ease / ease-in-out */
+    transition: right 0.5s ease;
+}
+
+/* Ketika toast ditampilkan, geser ke kanan (posisi final) */
+#toast-container.show {
+    right: 20px; 
+}
+
   /* Responsif */
   @media (max-width: 768px) {
     .contact-cards {
