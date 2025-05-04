@@ -376,6 +376,20 @@
     // Panggil fungsi saat ukuran jendela berubah
     // window.onresize = setupScrollReveal;
         </script>
+        <!-- script for send message with email js -->
+
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+    emailjs.init('YOUR_USER_ID'); // dari dashboard EmailJS
+
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+        .then(() => alert('Pesan berhasil dikirim!'))
+        .catch(err => alert('Gagal mengirim: ' + err));
+    });
+    </script>
+    
         <script src="script.js"></script>
     </body>
     </html>
