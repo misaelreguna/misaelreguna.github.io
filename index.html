@@ -275,7 +275,7 @@
         }
     });
     });
-        </script>
+    </script>
 
 
     <!-- //berguna untuk membuat animasi scroll reveal atau animasi kiri-kanan object -->
@@ -376,23 +376,25 @@
     // Panggil fungsi saat ukuran jendela berubah
     // window.onresize = setupScrollReveal;
         </script>
+
         <!-- script for send message with email js -->
-
         <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-        <script>
-        window.onload = function () {
-            emailjs.init('YOUR_USER_ID');
-            document.getElementById('contact-form').addEventListener('submit', function (e) {
-            e.preventDefault();
-            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-                .then(() => alert('Pesan berhasil dikirim!'))
-                .catch(error => {
-  console.error('EmailJS Error:', error); // tampilkan di console
-  alert('Gagal mengirim: ' + JSON.stringify(error)); // tampilkan isi error
-});
-        </script>
+<script>
+  window.onload = function () {
+    emailjs.init('XqGm9yh5NCz-c_fDI'); // ← ganti dengan Public Key kamu
 
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
 
+      emailjs.sendForm('service_ydeulzc', 'template_5ytc9ee', this) // ← ganti dengan ID asli kamu
+        .then(() => alert('Pesan berhasil dikirim!'))
+        .catch(error => {
+          console.error('EmailJS Error:', error);
+          alert('Gagal mengirim: ' + JSON.stringify(error));
+        });
+    });
+  };
+</script>
         <script src="script.js"></script>
     </body>
     </html>
