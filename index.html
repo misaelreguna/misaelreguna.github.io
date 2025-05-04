@@ -387,12 +387,14 @@
       e.preventDefault();
 
       emailjs.sendForm('service_ydeulzc', 'template_5ytc9ee', this) // ← ganti dengan ID asli kamu
-        .then(() => alert('Pesan berhasil dikirim!'))
-        .this.reset()
-        .catch(error => {
-          console.error('EmailJS Error:', error);
-          alert('Gagal mengirim: ' + JSON.stringify(error));
-        });
+      then(() => {
+        alert('Pesan berhasil dikirim!');
+        this.reset(); // ← Tambahkan ini agar form dikosongkan
+      })
+      .catch(error => {
+        console.error('EmailJS Error:', error);
+        alert('Gagal mengirim: ' + JSON.stringify(error));
+      });
     });
   };
 </script>
