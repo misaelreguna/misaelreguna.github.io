@@ -97,12 +97,65 @@ const saveMessages = (name, email, message, subject) => {
         email: email,
         message: message,
         subject: subject,
+        timestamp: firebase.database.ServerValue.TIMESTAMP // Simpan timestamp dari server
     });
 }
 
 const getElementVal = (id) => {
     return document.getElementById(id).value;
 }
+
+// reference to database
+const dbRef = firebase.database().ref("portfolioMisael");
+
+// fungsi untuk mengambil data dari firebase
+function fetchComments() {
+    dbRef.once("value", (snapshot) => {
+        const commentsContainer = document.getElementById("commentsContainer");
+        commentsContainer.innerHTML = "";
+
+        if (!snapshot.exists()) {
+            commentsContainer.innerHTML = "<p>No comments yet.</p>";
+            return;
+        }
+
+        snapshot.forEach((childSnapshot) => {
+            const val = childSnapshot.val();
+            const name = val.name || "No Name";
+            const message = val.message || "";
+            const timestamp = val.timestamp || Date.now(); // Jika tidak ada timestamp, gunakan waktu sekarang
+
+            // Konversi timestamp ke format tanggal yang lebih mudah dibaca
+            const date = new Date(timestamp);
+            const formattedTime = date.toLocaleString("id-ID", {
+                hour: "2-digit",
+                minute: "2-digit",
+                day: "numeric",
+                month: "short",
+                year: "numeric",
+            });
+
+            // Buat div komentar
+            const commentDiv = document.createElement("div");
+            commentDiv.className = "comment border-b pb-2 mb-2";
+
+            commentDiv.innerHTML = `
+                <div class="comment-header">
+                    <span class="comment-username font-bold">${name}</span>
+                    <span class="comment-time text-gray-400 text-sm ml-2">${formattedTime}</span>
+                </div>
+                <div class="comment-body text-gray-700">
+                    ${message}
+                </div>
+            `;
+
+            commentsContainer.appendChild(commentDiv);
+        });
+    });
+}
+
+  
+  
 
 // Fungsi untuk menganimasikan progress bar lingkaran
 function animateProgress(progressElement) {

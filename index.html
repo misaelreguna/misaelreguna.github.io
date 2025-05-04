@@ -204,10 +204,13 @@
                 <input type="email" name="email" id="email" placeholder="Email" required />
                 <input type="text" name="subject" id="subject" placeholder="Subject" />
               </div>
-              <div class="form-right">
+              <div class="form-right atas">
                 <textarea name="message" id="message" placeholder="Message" required></textarea>
               
-              <div >
+              <div class="form-right bawah" >
+                <button onclick="fetchComments()"
+                class="fa-regular fa-message" type="button" data-modal-target="timeline-modal" data-modal-toggle="timeline-modal" ></button>
+                <span class="badge">3</span>
                 <button type="submit" class="btn-send">Send Message</button>
               </div>
               </div>
@@ -221,6 +224,24 @@
             </div>
           </footer>
           <!-- End contact -->
+
+
+        <!-- Modal Message -->
+
+        <div id="timeline-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] p-none">
+            <div class="relative p-4 w-full max-w-md max-h-full bg-white rounded-lg shadow ">
+                <h2 class="text-xl font-bold mb-4">Comments</h2>
+                <div id="commentsContainer" class="space-y-4">
+                  <!-- Komentar akan di-generate di sini -->
+                </div>
+              </div>
+                  
+        </div> 
+        <!-- End Modal Message -->
+
+        
+
+
           <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
         </body>
         </html>

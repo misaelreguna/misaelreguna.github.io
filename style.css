@@ -512,13 +512,40 @@ nav .navlinks li a:active{
     margin-top: 20px;
     /* margin-left: 795px; */
     /* margin-left: 300px; */
-    margin-left: 267.8px;
+    margin-left: 0px;
     transition: background 0.3s;
   }
   .btn-send:hover {
     background: #2f8d6e;
   }
   
+  .form-right .bawah{
+    display: flex;
+    flex-direction: row;
+    min-width: none;
+    gap: 0px;
+}
+
+    .form-right .bawah .fa-message{
+        font-size: 2.5rem;
+        margin-left: 202px;
+        align-self: flex-end;
+        cursor:pointer;
+    }
+
+      .bawah .badge{
+        color: rgb(255, 255, 255);
+        padding: 10px;
+        border-radius: 50%;
+        width: 25px;
+        height: 20px;
+        top: 20px;
+        padding: 0px 0px 25px 1px;
+        position: relative;
+        background-color: red;
+        right: 20px;
+      }
+
   .footer-bottom {
     min-width: 1000px;
     padding-top: 2rem;
@@ -559,6 +586,61 @@ nav .navlinks li a:active{
     /* Durasi transisi 0.5 detik, tipe easing linear/ ease / ease-in-out */
     transition: right 0.5s ease;
 }
+
+/* Modal Container */
+.relative {
+    max-height: none;
+    background-color: #222;
+    min-width: 90vh;    
+}
+
+.comment {
+    max-width: 100%; /* Batasi lebar komentar agar tidak melebihi kontainer */
+    word-wrap: break-word; /* Pastikan kata panjang dipotong agar tidak melebar */
+    overflow-wrap: break-word;
+    white-space: normal; /* Pastikan teks bisa turun ke baris berikutnya */
+  }
+
+#timeline-modal .comment {
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+  
+  #timeline-modal .comment-body{
+    color:#F2EFE7;
+  }
+  /* Hilangkan border-b bawaan jika tak diperlukan */
+  #timeline-modal .comment.border-b {
+    border-bottom: none;
+  }
+  
+  /* Sesuaikan tampilan header */
+  .comment-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .comment-username {
+    font-weight: bold;
+    color: #008cba; /* misal warna hijau */
+  }
+  
+  .comment-time {
+    font-size: 0.85rem;
+    color: #c5c1c1; /* abu-abu muda */
+  }
+  
+  .comment-body {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  .relative .text-xl{
+    color: #222;
+  }
 
 /* Ketika toast ditampilkan, geser ke kanan (posisi final) */
 #toast-container.show {
