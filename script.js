@@ -175,32 +175,6 @@ document.querySelectorAll('.progress').forEach(progress => {
     observer.observe(progress);
 });
 
-//JS
-
-//Berfungsi untuk mengatur selected pada project
-document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".filter-btn");
-    const items = document.querySelectorAll(".gallery-item");
-
-    buttons.forEach(button => {
-        button.addEventListener("click", function () {
-            // Hapus kelas 'active' dari semua tombol
-            buttons.forEach(btn => btn.classList.remove("active"));
-            this.classList.add("active");
-
-            const filter = this.getAttribute("data-filter");
-
-            items.forEach(item => {
-                if (filter === "all" || item.classList.contains(filter)) {
-                    item.classList.remove("hidden");
-                } else {
-                    item.classList.add("hidden");
-                }
-            });
-        });
-    });
-});
-
 const backToTop = document.getElementById('backToTop');
     backToTop.addEventListener('click', () => {
         window.scrollTo({
@@ -208,3 +182,5 @@ const backToTop = document.getElementById('backToTop');
             behavior: 'smooth'
         });
     });
+
+    

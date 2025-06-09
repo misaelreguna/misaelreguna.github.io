@@ -1,369 +1,394 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Personal Website</title>
-        <link rel="stylesheet" href="style.css">
-        <!----Font awesome cdn  font icon css -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
 
-        <!-- link js animasi ScrollReveal -->
-        <script src="https://unpkg.com/scrollreveal"></script>
-        <link rel="icon" type="image/png" href="images/logo_bulat.ico">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Link Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-        <!-- cdn flowbite -->
-        <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <!----Font awesome cdn  font icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 
-        <!-- cdn font awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">    
-    </head>
-    <body>
-        <!-- HERO HEADER & NAV -->
-        <div class="hero-header">
-            <header>
-                <div class="logo">
-                    <div class="frame-logo">
-                        <a href="index.html"><img src="images/logo.png" alt="logo"></a>
-                    </div>
-                    <div class="logo-text">El~Portofolio</div>
+    <!-- link js animasi ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="icon" type="image/png" href="images/logo_bulat.ico">
+
+    <!-- cdn flowbite -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+
+    <!-- cdn font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- HERO HEADER & NAV -->
+    <div class="hero-header">
+        <header>
+            <div class="logo">
+                <div class="frame-logo">
+                    <a href="index.html"><img src="images/logo.png" alt="logo"></a>
                 </div>
-                <nav>
-                    <div class="togglebtn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <ul class="navlinks">
-                        <li><a href="#home" class="active">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#myskill">My Skill</a></li>
-                        <li><a href="#project">Project</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <!-- HOME -->
-            <div class="home" id="home">
-                <div class="container">
-                    <div class="hero-pic">
-                        <img src="images/misael baru hitam.png" alt="profile pic" >
-                    </div>
-                    <div class="hero-text">
-                        <h5>Hi I'm <span class="input">Backend Developer</span></h5>
-                        <h1>Misael Reguna</h1>
-                        <p> Perkenalkan saya adalah seorang website developer dengan pengalaman magang sekitar satu tahun. Sebagai seorang website
-                            developer saya mampu membuat website yang interaktif dan juga menarik. Hubungi saya jika anda ingin tahu lebih dalam
-                            tentang saya.
-                        </p>
+                <div class="logo-text">El~Portofolio</div>
+            </div>
+            <nav>
+                <div class="togglebtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="navlinks">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#myskill">My Skill</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#contact">Message</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- HOME -->
+        <div class="home" id="home">
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="images/misael baru hitam.png" alt="profile pic">
+                </div>
+                <div class="hero-text">
+                    <h5>Hi I'm <span class="input">Backend Developer</span></h5>
+                    <h1>Misael Reguna</h1>
+                    <p> Perkenalkan saya adalah seorang website developer dengan pengalaman magang sekitar satu tahun.
+                        Sebagai seorang website
+                        developer saya mampu membuat website yang interaktif dan juga menarik. Hubungi saya jika anda
+                        ingin tahu lebih dalam
+                        tentang saya.
+                    </p>
 
-                        <div class="btn-group">
+                    <div class="btn-group">
                         <a href="#" class="btn active">Download CV</a>
                         <a href="https://wa.me/628985304289" class="btn">Contact</a>
-                        </div>
+                    </div>
 
-                        <div class="social">
-                            <a href="https://wa.link/yrmmxv"><i class="fa-brands fa-whatsapp"></i></a>
-                            <a href="www.linkedin.com/in/misael-reguna-gagarin-manik"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="https://www.instagram.com/misaelreguna/"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://github.com/misaelreguna"><i class="fa-brands fa-github"></i></a>
-                        </div>
+                    <div class="social">
+                        <a href="https://wa.link/yrmmxv"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="www.linkedin.com/in/misael-reguna-gagarin-manik"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/misaelreguna/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/misaelreguna"><i class="fa-brands fa-github"></i></a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- ABOUT  -->
-        <section class="about" id="about">
-            <div class="about_content">
-                <h1>ABOUT ME</h1>
-                <p>Halo saya Misael seorang programmer asal Jakarta. Saya adalah seorang Web Developer yang sudah memiliki pengalaman magang sekitar satu tahun. Ketertarikan saya terhadap dunia coding sudah ada sejak umur masih belasan tahun. Saat duduk di bangku SMK saya terbilang cukup aktif dalam mengikuti kegiatan lomba.Ada yang lolos grandfinal ada juga yang nggak hehee.. Namanya juga coba-coba wkwk artinya disini saya memiliki jiwa pantang menyerah.  </p>
-            </div>
-            <div class="about_image">
-                <img src="images/poto kaca 2.jpeg" alt="misael image" class="about_small-1 "> <!--jika di mobile maka poto yang bawah-->
-                <img src="images/gmbr1.jpeg" alt="misael image" class="main">
-                <img src="images/poto kaca.jpeg" alt="misael image" class="about_small "> <!--jika di mobile maka poto yang atas-->
-            </div>
-            <div class="content2">
-                <p>Halo saya Misael seorang programmer asal Jakarta. Saya adalah seorang Web Developer yang sudah memiliki pengalaman magang sekitar satu tahun. Ketertarikan saya terhadap dunia coding sudah ada sejak umur masih belasan tahun. Saat duduk di bangku SMK saya terbilang cukup aktif dalam mengikuti kegiatan lomba.Ada yang lolos grandfinal ada juga yang nggak hehee.. Namanya juga coba-coba wkwk artinya disini saya memiliki jiwa pantang menyerah.  </p>
-            </div>
-        </section>
+    <!-- ABOUT  -->
+    <section class="about" id="about">
+        <div class="about_content">
+            <h1>ABOUT ME</h1>
+            <p>Halo saya Misael seorang programmer asal Jakarta. Saya adalah seorang Web Developer yang sudah memiliki
+                pengalaman magang sekitar satu tahun. Ketertarikan saya terhadap dunia coding sudah ada sejak umur masih
+                belasan tahun. Saat duduk di bangku SMK saya terbilang cukup aktif dalam mengikuti kegiatan lomba.Ada
+                yang lolos grandfinal ada juga yang nggak hehee.. Namanya juga coba-coba wkwk artinya disini saya
+                memiliki jiwa pantang menyerah. </p>
+        </div>
+        <div class="about_image">
+            <img src="images/poto kaca 2.jpeg" alt="misael image" class="about_small-1 ">
+            <!--jika di mobile maka poto yang bawah-->
+            <img src="images/gmbr1.jpeg" alt="misael image" class="main">
+            <img src="images/poto kaca.jpeg" alt="misael image" class="about_small a">
+            <!--jika di mobile maka poto yang atas-->
+        </div>
+        <div class="content2">
+            <p>Halo saya Misael seorang programmer asal Jakarta. Saya adalah seorang Web Developer yang sudah memiliki
+                pengalaman magang sekitar satu tahun. Ketertarikan saya terhadap dunia coding sudah ada sejak umur masih
+                belasan tahun. Saat duduk di bangku SMK saya terbilang cukup aktif dalam mengikuti kegiatan lomba.Ada
+                yang lolos grandfinal ada juga yang nggak hehee.. Namanya juga coba-coba wkwk artinya disini saya
+                memiliki jiwa pantang menyerah. </p>
+        </div>
+    </section>
 
 
-        <!-- My skill -->
-        <section class="myskill" id="myskill">
-            <h1>My Skill</h1>
-            <div class="skill-1 ">
-                <div class="satu progress">
-                    <div class="circular-progress" data-progress="90">
-                        <div class="progress-value">90%</div>
-                    </div>
-                    <div class="text">HTML</div>
+    <!-- My skill -->
+    <section class="myskill" id="myskill">
+        <h1>My Skill</h1>
+        <div class="skill-1 ">
+            <div class="satu progress">
+                <div class="circular-progress" data-progress="90">
+                    <div class="progress-value">90%</div>
                 </div>
-                <div class="dua progress">
-                    <div class="circular-progress" data-progress="88">
-                        <div class="progress-value">88%</div>
-                    </div>
-                    <div class="text">CSS</div>
-                </div>
-                <div class="tiga progress">
-                    <div class="circular-progress" data-progress="60">
-                        <div class="progress-value">60%</div>
-                    </div>
-                    <div class="text">JavaScript</div>
-                </div>
-                <div class="empat progress">
-                    <div class="circular-progress" data-progress="80">
-                        <div class="progress-value">80%</div>
-                    </div>
-                    <div class="text">Boostrap</div>
-                </div>
-                <div class="lima progress">
-                    <div class="circular-progress" data-progress="70">
-                        <div class="progress-value">70%</div>
-                    </div>
-                    <div class="text">Laravel</div>
-                </div>
-                <div class="enam progress">
-                    <div class="circular-progress" data-progress="60">
-                        <div class="progress-value">60%</div>
-                    </div>
-                    <div class="text">Tailwind</div>
-                </div>
+                <div class="text">HTML</div>
             </div>
-        </section>
+            <div class="dua progress">
+                <div class="circular-progress" data-progress="88">
+                    <div class="progress-value">88%</div>
+                </div>
+                <div class="text">CSS</div>
+            </div>
+            <div class="tiga progress">
+                <div class="circular-progress" data-progress="60">
+                    <div class="progress-value">60%</div>
+                </div>
+                <div class="text">JavaScript</div>
+            </div>
+            <div class="empat progress">
+                <div class="circular-progress" data-progress="80">
+                    <div class="progress-value">80%</div>
+                </div>
+                <div class="text">Boostrap</div>
+            </div>
+            <div class="lima progress">
+                <div class="circular-progress" data-progress="70">
+                    <div class="progress-value">70%</div>
+                </div>
+                <div class="text">Laravel</div>
+            </div>
+            <div class="enam progress">
+                <div class="circular-progress" data-progress="60">
+                    <div class="progress-value">60%</div>
+                </div>
+                <div class="text">Tailwind</div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Project -->
-         <section class="project" id="project">
-            <h1>Project</h1>
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">ALL</button>
-                <button class="filter-btn" data-filter="website">WEBSITE PROJECT</button>
-                <button class="filter-btn" data-filter="android">ANDROID PROJECT</button>
-                <button class="filter-btn" data-filter="wordpress">WORDPRESS</button>
-            </div>
-        
-            <div class="gallery">
-                <div class="gallery-item website">
-                    <img src="images/repo dpf.png" alt="website dpf">
-                </div>
-                <div class="gallery-item website">
-                    <img src="images/web sekolah.png" alt="website sekolah">
-                </div>
-                <div class="gallery-item website">
-                    <img src="images/web sekolah sehat.png" alt="website sekolah sehat">
-                </div>
-                <div class="gallery-item android">
-                    <img src="images/warung makan android.png" alt="android warung makan">
-                </div>
-                <div class="gallery-item wordpress">
-                    <img src="images/wordpress program ramadhan.png" alt="wordpress program ramadhan">
-                </div>
-                <div class="gallery-item wordpress">
-                    <img src="images/wordpress ajak.png" alt="wordpress ajak">
-                </div>
-            </div>
-         </section>
-        <!-- End Project -->
-        
-        <!-- contact -->
-         
-          <footer class="contact" id="contact">
-            <!-- EDITED: Added notification container for Flowbite toast -->
-              <div id="toast-container" class="fixed top-5 right-5 z-50"></div>
-              <h1>Contact</h1>
+    <!-- Project -->
+    <section class="project" id="project">
+        <h1>Project</h1>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Card 1 -->
+      <div class="bg-transparent rounded-xl overflow-hidden shadow-lg hover:shadow-2xl">
+        <img src="images/web sekolah.png" alt="Gambar Website Sekolah" class=" gambar w-full h-48 object-cover">
+        <div class="p-6">
+          <h2 class="text-xl font-semibold text-cyan-400 mb-2">Website<span class="text-white"> Sekolah</span></h2>
+          <p class="text-gray-300 mb-4 text-sm">Sebuah website yang memberikan informasi tentang sekolah tersebut</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-cyan-900 px-3 py-1 rounded-full text-sm">HTML</span>
+            <span class="bg-cyan-900 px-3 py-1 rounded-full text-sm">CSS</span>
+            <span class="bg-cyan-900 px-3 py-1 rounded-full text-sm">JSS</span>
+          </div>
+          <a href="#" class="text-sm text-white hover:underline inline-flex items-center">Lihat Detail <span class="ml-1">→</span></a>
+        </div>
+      </div>
 
-            <!-- Kartu Info Kontak -->
-            <div class="contact-cards">
-              <div class="card">
-                <i class="fas fa-phone card-icon"></i>
-                <p class="card-detail">08985304289</p>
-              </div>
-              <div class="card">
-                <i class="fas fa-envelope card-icon"></i>
-                <p class="card-detail">misaelreguna@gmail.com</p>
-              </div>
-              <div class="card">
-                <i class="fas fa-map-marker-alt card-icon"></i>
-                <p class="card-detail">Jakarta, Indonesia</p>
-              </div>
-            </div>
-        
-            <!-- Form Kontak -->
-            <form class="contact-form" id="contactForm">
-              <div class="form-left">
+      <!-- Card 2 -->
+      <div class="bg-transparent rounded-xl overflow-hidden shadow-lg hover:shadow-2xl">
+        <img src="images/website repository.png" alt="Gambar Website Repository" class="gambar w-full h-48 object-cover">
+        <div class="p-6">
+          <h2 class="text-xl font-semibold text-cyan-400 mb-2">Website <span class="text-white">Repository</span></h2>
+          <p class="text-gray-300 mb-4 text-sm">Mengelola file penting perusahaan dengan menggunakan webste repository</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-cyan-900 px-3 py-1 rounded-full text-sm">Laravel</span>
+            <span class="bg-cyan-900 px-3 py-1 rounded-full text-sm">PHP</span>
+            <span class="bg-cyan-900 px-3 py-1 rounded-full text-sm">Tailwind</span>
+            <span class="bg-cyan-900 px-3 py-1 rounded-full text-sm">HTML</span>
+          </div>
+          <a href="#" class="text-sm text-white hover:underline inline-flex items-center">Lihat Detail <span class="ml-1">→</span></a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-transparent rounded-xl overflow-hidden shadow-lg hover:shadow-2xl">
+        <img src="images/Website Bank Mini.png" alt="Gambar Website Bank Mini" class="gambar w-full h-48 object-cover">
+        <div class="p-6">
+          <h2 class="text-xl font-semibold text-cyan-400 mb-2">Website <span class="text-white">Bank Mini</span></h2>
+          <p class="text-gray-300 mb-4 text-sm">Website Bank Mini yang dapat melakukan CRUD dengan tampilan yang menarik</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-cyan-900 px-3 py-1 rounded-full text-sm">Laravel</span>
+            <span class="bg-cyan-900 px-3 py-1 rounded-full text-sm">PHP</span>
+            <span class="bg-cyan-900 px-3 py-1 rounded-full text-sm">Tailwind</span>
+            <span class="bg-cyan-900 px-3 py-1 rounded-full text-sm">HTML</span>
+          </div>
+          <a href="#" class="text-sm text-white hover:underline inline-flex items-center">Lihat Detail <span class="ml-1">→</span></a>
+        </div>
+      </div>
+
+    </div>
+    </section>
+    <!-- End Project -->
+
+
+    <!-- CONTACT SECTION -->
+    <footer class="contact" id="contact">
+        <!-- EDITED: Added notification container for Flowbite toast -->
+        <div id="toast-container" class="fixed top-5 right-5 z-50"></div>
+        <h1>Message</h1>
+        <!-- Form Kontak -->
+        <form class="contact-form" id="contactForm">
+            <div class="form-left">
                 <input type="text" name="user_name" id="user_name" placeholder="Name" required />
                 <input type="email" name="user_email" id="user_email" placeholder="Email" required />
                 <input type="text" name="subject" id="subject" placeholder="Subject" />
-              </div>
-              <div class="form-right">
+            </div>
+            <div class="form-right">
                 <textarea name="message" id="message" placeholder="Message" required></textarea>
-              
-              <div >
-                <button type="submit" class="btn-send">Send Message</button>
-              </div>
-              </div>
-            </form>
-            
-            <div class="footer-bottom">
-                <p class="copyright">&copy; 2025 Portfolio Misael Reguna All Rights Reserved.</p>
-                <div class="back-to-top" id="backToTop">
-                    <i class="fas fa-arrow-up"></i>
+
+                <div class="button-send">
+                    <button type="submit" class="btn-send">Send Message</button>
                 </div>
             </div>
-          </footer>
-          <!-- End contact -->
-          <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-        </body>
-        </html>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
-        <script>
-            (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="RmPTzhv6iUKCV7t5USdd4";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
-            </script>
-        
+        </form>
 
-        <!---typed js for typing text effect-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
-        <script>
-            /** creating button click show hide navbar **/
-            var togglebtn=document.querySelector(".togglebtn");
-            var nav=document.querySelector(".navlinks");
-            var links=document.querySelector(".navlinks li");
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2025 Portfolio Misael Reguna All Rights Reserved.</p>
+            <div class="back-to-top" id="backToTop">
+                <i class="fas fa-arrow-up"></i>
+            </div>
+        </div>
+    </footer>
+    <!-- End contact -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
 
-            togglebtn.addEventListener("click", function(){
-                this.classList.toggle("click");
-                nav.classList.toggle("open");
-            })
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script>
+    (function () { if (!window.chatbase || window.chatbase("getState") !== "initialized") { window.chatbase = (...arguments) => { if (!window.chatbase.q) { window.chatbase.q = [] } window.chatbase.q.push(arguments) }; window.chatbase = new Proxy(window.chatbase, { get(target, prop) { if (prop === "q") { return target.q } return (...args) => target(prop, ...args) } }) } const onLoad = function () { const script = document.createElement("script"); script.src = "https://www.chatbase.co/embed.min.js"; script.id = "RmPTzhv6iUKCV7t5USdd4"; script.domain = "www.chatbase.co"; document.body.appendChild(script) }; if (document.readyState === "complete") { onLoad() } else { window.addEventListener("load", onLoad) } })();
+</script>
 
-            var typed=new Typed(".input",{
-                strings:["BackEnd Developer","Frontend Developer","Web Developer"],
-                typedSpeed:70,
-                backSpeed:55,
-                loop:true
-            })
-        </script>
 
-        <script>
-            //Berguna untuk membuat navbar menjadi hidup/active saat berada di posisi atau scroll tertentu
-            window.addEventListener('scroll', function() {
-    // Dapatkan semua elemen section
-    const sections = document.querySelectorAll('section');
-    // Dapatkan tinggi viewport
-    const scrollPos = window.scrollY + 100; // Tambahkan sedikit offset agar lebih responsif
-    
-    // Loop melalui setiap section
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        
-        // Cek jika posisi scroll berada dalam jarak section tertentu
-        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-        // Hapus class active dari semua link
-        document.querySelectorAll('nav .navlinks li a').forEach(nav => nav.classList.remove('active'));
-        
-        // Tambahkan class active pada link yang sesuai
-        const activeNav = document.querySelector(`nav .navlinks li a[href="#${section.id}"]`);
-        activeNav.classList.add('active');
-        }
+<!---typed js for typing text effect-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+<script>
+    /** creating button click show hide navbar **/
+    var togglebtn = document.querySelector(".togglebtn");
+    var nav = document.querySelector(".navlinks");
+    var links = document.querySelector(".navlinks li");
+
+    togglebtn.addEventListener("click", function () {
+        this.classList.toggle("click");
+        nav.classList.toggle("open");
+    })
+
+    var typed = new Typed(".input", {
+        strings: ["BackEnd Developer", "Frontend Developer", "Web Developer"],
+        typedSpeed: 70,
+        backSpeed: 55,
+        loop: true
+    })
+</script>
+
+<script>
+    //Berguna untuk membuat navbar menjadi hidup/active saat berada di posisi atau scroll tertentu
+    window.addEventListener('scroll', function () {
+        // Dapatkan semua elemen section
+        const sections = document.querySelectorAll('section');
+        // Dapatkan tinggi viewport
+        const scrollPos = window.scrollY + 100; // Tambahkan sedikit offset agar lebih responsif
+
+        // Loop melalui setiap section
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+
+            // Cek jika posisi scroll berada dalam jarak section tertentu
+            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                // Hapus class active dari semua link
+                document.querySelectorAll('nav .navlinks li a').forEach(nav => nav.classList.remove('active'));
+
+                // Tambahkan class active pada link yang sesuai
+                const activeNav = document.querySelector(`nav .navlinks li a[href="#${section.id}"]`);
+                activeNav.classList.add('active');
+            }
+        });
     });
-    });
-    </script>
+</script>
 
 
-    <!-- //berguna untuk membuat animasi scroll reveal atau animasi kiri-kanan object -->
-        <script>
-            // berguna untuk membuar nilai awal atau default pada scrollreveal
-            const scrollRevealOption = {
-            distance: "50px",
-            origin: "bottom",
-            duration: 1000,
-            easing: "ease-in-out",
-            reset: false,
+<!-- //berguna untuk membuat animasi scroll reveal atau animasi kiri-kanan object -->
+<script>
+    // berguna untuk membuar nilai awal atau default pada scrollreveal
+    const scrollRevealOption = {
+        distance: "50px",
+        origin: "bottom",
+        duration: 1000,
+        easing: "ease-in-out",
+        reset: false,
     };
-    function setupScrollReveal(){
-    if (window.innerWidth <= 768) {
-        
-        ScrollReveal().reveal(".hero-text", {
-            origin: "left", // Muncul dari bawah untuk mobile
-            distance: "40px",
-            duration: 800,
-            easing: "ease-in",
-            reset: false, // Animasi hanya terjadi sekali di mobile
-        });
-        
-        ScrollReveal().reveal(".hero-pic", {
-            origin: "right", // Muncul dari bawah untuk mobile
-            distance: "40px",
-            duration: 900,
-            easing: "ease-in",
-            reset: false, // Animasi hanya terjadi sekali di mobile
-        });
+    function setupScrollReveal() {
+        if (window.innerWidth <= 768) {
 
-        ScrollReveal().reveal(".about_content h1 ", {
-            origin: "top", // Muncul dari bawah untuk mobile
-            distance: "50px",
-            duration: 1000,
-            easing: "ease-in",
-            reset: false, // Animasi hanya terjadi sekali di mobile
-        });
-        ScrollReveal().reveal(".atas", {
-            origin: "left", // Muncul dari bawah untuk mobile
-            distance: "50px",
-            duration: 1200,
-            easing: "ease-in",
-            reset: false, // Animasi hanya terjadi sekali di mobile
-        });
-        ScrollReveal().reveal(".bawah", {
-            origin: "right", // Muncul dari bawah untuk mobile
-            distance: "50px",
-            duration: 1300,
-            easing: "ease-in",
-            reset: false, // Animasi hanya terjadi sekali di mobile
-        });
-    } else {
-        ScrollReveal().reveal(".hero-text", {
-            origin: "right", // Muncul dari kanan di desktop
-            distance: "100px",
-            duration: 1000,
-            easing: "ease-in-out",
-            reset: true,
-        });
+            ScrollReveal().reveal(".hero-text", {
+                origin: "left", // Muncul dari bawah untuk mobile
+                distance: "40px",
+                duration: 800,
+                easing: "ease-in",
+                reset: false, // Animasi hanya terjadi sekali di mobile
+            });
 
-        ScrollReveal().reveal(".hero-pic", {
-            origin: "left", // Muncul dari kanan di desktop
-            distance: "100px",
-            duration: 1000,
-            easing: "ease-in-out",
-            reset: true,
-        }); 
-        ScrollReveal().reveal(".about_content h1", {
-            origin: "left", // Muncul dari kanan di desktop
-            distance: "100px",
-            duration: 1000,
-            easing: "ease-in-out",
-            reset: true,
-        });
+            ScrollReveal().reveal(".hero-pic", {
+                origin: "right", // Muncul dari bawah untuk mobile
+                distance: "40px",
+                duration: 900,
+                easing: "ease-in",
+                reset: false, // Animasi hanya terjadi sekali di mobile
+            });
 
-        ScrollReveal().reveal(".about_content p", {
-            origin: "right", // Muncul dari kanan di desktop
-            distance: "100px",
-            duration: 1000,
-            easing: "ease-in-out",
-            reset: true,
-        });
+            ScrollReveal().reveal(".about_content h1 ", {
+                origin: "top", // Muncul dari bawah untuk mobile
+                distance: "50px",
+                duration: 1000,
+                easing: "ease-in",
+                reset: false, // Animasi hanya terjadi sekali di mobile
+            });
+            ScrollReveal().reveal(".atas", {
+                origin: "left", // Muncul dari bawah untuk mobile
+                distance: "50px",
+                duration: 1200,
+                easing: "ease-in",
+                reset: false, // Animasi hanya terjadi sekali di mobile
+            });
+            ScrollReveal().reveal(".bawah", {
+                origin: "right", // Muncul dari bawah untuk mobile
+                distance: "50px",
+                duration: 1300,
+                easing: "ease-in",
+                reset: false, // Animasi hanya terjadi sekali di mobile
+            });
+        } else {
+            ScrollReveal().reveal(".hero-text", {
+                origin: "right", // Muncul dari kanan di desktop
+                distance: "100px",
+                duration: 1000,
+                easing: "ease-in-out",
+                reset: true,
+            });
 
-        ScrollReveal().reveal(".about_image", {
-            origin: "bottom", // Muncul dari kanan di desktop
-            distance: "100px",
-            duration: 1000,
-            easing: "ease-in",
-            reset: true,
-        });
-    }
+            ScrollReveal().reveal(".hero-pic", {
+                origin: "left", // Muncul dari kanan di desktop
+                distance: "100px",
+                duration: 1000,
+                easing: "ease-in-out",
+                reset: true,
+            });
+            ScrollReveal().reveal(".about_content h1", {
+                origin: "left", // Muncul dari kanan di desktop
+                distance: "100px",
+                duration: 1000,
+                easing: "ease-in-out",
+                reset: true,
+            });
+
+            ScrollReveal().reveal(".about_content p", {
+                origin: "right", // Muncul dari kanan di desktop
+                distance: "100px",
+                duration: 1000,
+                easing: "ease-in-out",
+                reset: true,
+            });
+
+            ScrollReveal().reveal(".about_image", {
+                origin: "bottom", // Muncul dari kanan di desktop
+                distance: "100px",
+                duration: 1000,
+                easing: "ease-in",
+                reset: true,
+            });
+        }
     }
 
     // Panggil fungsi saat halaman dimuat
@@ -371,29 +396,30 @@
 
     // Panggil fungsi saat ukuran jendela berubah
     // window.onresize = setupScrollReveal;
-        </script>
-
-        <!-- script for send message with email js -->
-        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  window.onload = function () {
-    emailjs.init('XqGm9yh5NCz-c_fDI'); // ← ganti dengan Public Key kamu
-
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      emailjs.sendForm('service_ydeulzc', 'template_5ytc9ee', this) // ← ganti dengan ID asli kamu
-      .then(() => {
-        alert('Pesan berhasil dikirim!');
-        this.reset(); // ← Tambahkan ini agar form dikosongkan
-      })
-      .catch(error => {
-        console.error('EmailJS Error:', error);
-        alert('Gagal mengirim: ' + JSON.stringify(error));
-      });
-    });
-  };
 </script>
-        <script src="script.js"></script>
-    </body>
-    </html>
+
+<!-- script for send message with email js -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    window.onload = function () {
+        emailjs.init('XqGm9yh5NCz-c_fDI'); // ← ganti dengan Public Key kamu
+
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            emailjs.sendForm('service_ydeulzc', 'template_5ytc9ee', this) // ← ganti dengan ID asli kamu
+                .then(() => {
+                    alert('Pesan berhasil dikirim!');
+                    this.reset(); // ← Tambahkan ini agar form dikosongkan
+                })
+                .catch(error => {
+                    console.error('EmailJS Error:', error);
+                    alert('Gagal mengirim: ' + JSON.stringify(error));
+                });
+        });
+    };
+</script>
+<script src="script.js"></script>
+</body>
+
+</html>
