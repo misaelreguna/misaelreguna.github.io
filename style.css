@@ -533,7 +533,7 @@ textarea {
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 414px) {
   nav .togglebtn {
     display: initial;
   }
