@@ -17,14 +17,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 
     <!-- link js animasi ScrollReveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="icon" type="image/png" href="images/logo_bulat.ico">
 
     <!-- cdn flowbite -->
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 
-    <!-- cdn font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <meta name="description" content="Website portofolio pribadi Misael Reguna, seorang Web Developer dari Jakarta dengan pengalaman magang satu tahun.">
+
+    <meta property="og:title" content="Misael Reguna Portfolio" />
+    <meta property="og:description" content="Portofolio Misael Web Developer | Laravel, Tailwind, HTML" />
+    <meta property="og:url" content="https://misaelreguna.github.io/" />
+    <meta property="og:type" content="website" />
+
 </head>
 
 <body>
@@ -53,10 +57,10 @@
             </nav>
         </header>
         <!-- HOME -->
-        <div class="home" id="home">
+        <main class="home" id="home">
             <div class="container">
                 <div class="hero-pic">
-                    <img src="images/misael baru hitam.png" alt="profile pic">
+                    <img src="images/misael baru hitam.webp" alt="profile pic">
                 </div>
                 <div class="hero-text">
                     <h5>Hi I'm <span class="input">Backend Developer</span></h5>
@@ -75,20 +79,20 @@
 
                     <div class="social">
                         <a href="https://wa.link/yrmmxv"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="www.linkedin.com/in/misael-reguna-gagarin-manik"><i
+                        <a href="https://www.linkedin.com/in/misael-reguna-gagarin-manik"><i
                                 class="fa-brands fa-linkedin"></i></a>
                         <a href="https://www.instagram.com/misaelreguna/"><i class="fa-brands fa-instagram"></i></a>
                         <a href="https://github.com/misaelreguna"><i class="fa-brands fa-github"></i></a>
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     </div>
 
     <!-- ABOUT  -->
     <section class="about" id="about">
         <div class="about_content">
-            <h1>ABOUT ME</h1>
+            <h2>ABOUT ME</h2>
             <p>Halo saya Misael seorang programmer asal Jakarta. Saya adalah seorang Web Developer yang sudah memiliki
                 pengalaman magang sekitar satu tahun. Ketertarikan saya terhadap dunia coding sudah ada sejak umur masih
                 belasan tahun. Saat duduk di bangku SMK saya terbilang cukup aktif dalam mengikuti kegiatan lomba.Ada
@@ -114,7 +118,7 @@
 
     <!-- My skill -->
     <section class="myskill" id="myskill">
-        <h1>My Skill</h1>
+        <h2>My Skills</h2>
         <div class="skill-1 ">
             <div class="satu progress">
                 <div class="circular-progress" data-progress="90">
@@ -157,7 +161,7 @@
 
     <!-- Project -->
     <section class="project" id="project">
-        <h1>Project</h1>
+        <h2>Project</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       
       <!-- Card 1 -->
@@ -216,7 +220,7 @@
     <footer class="contact" id="contact">
         <!-- EDITED: Added notification container for Flowbite toast -->
         <div id="toast-container" class="fixed top-5 right-5 z-50"></div>
-        <h1>Message</h1>
+        <h2>Message</h2>
         <!-- Form Kontak -->
         <form class="contact-form" id="contactForm">
             <div class="form-left">
@@ -328,7 +332,7 @@
                 reset: false, // Animasi hanya terjadi sekali di mobile
             });
 
-            ScrollReveal().reveal(".about_content h1 ", {
+            ScrollReveal().reveal(".about_content h2 ", {
                 origin: "top", // Muncul dari bawah untuk mobile
                 distance: "50px",
                 duration: 1000,
@@ -365,7 +369,7 @@
                 easing: "ease-in-out",
                 reset: true,
             });
-            ScrollReveal().reveal(".about_content h1", {
+            ScrollReveal().reveal(".about_content h2", {
                 origin: "left", // Muncul dari kanan di desktop
                 distance: "100px",
                 duration: 1000,
@@ -419,6 +423,10 @@
         });
     };
 </script>
+
+//script scroll reveal
+<script src="https://unpkg.com/scrollreveal"></script>
+
 <script src="script.js"></script>
 </body>
 

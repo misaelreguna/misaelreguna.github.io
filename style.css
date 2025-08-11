@@ -112,7 +112,7 @@ nav .navlinks li a:active {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 20px;
-  padding-top: 150px;
+  padding-top: 100px;
 }
 .container {
   display: flex;
@@ -219,7 +219,7 @@ nav .navlinks li a:active {
   text-align: justify;
 }
 
-.about_content h1 {
+.about_content h2 {
   font-size: 4rem;
   font-weight: 700;
 }
@@ -276,7 +276,7 @@ nav .navlinks li a:active {
   flex-direction: column;
   scroll-margin-top: 60px; /* atau sebesar tinggi header */
 }
-.myskill h1 {
+.myskill h2 {
   margin-top: 30px;
   text-align: center;
   padding-bottom: 5%;
@@ -347,7 +347,8 @@ nav .navlinks li a:active {
   flex-direction: column;
   scroll-margin-top: 60px; /* atau sebesar tinggi header */
 }
-.project h1 {
+ /* > ini menyeleksi element satu turunan dibawhnya */
+ .project > h2 {
   /* padding-top:5% ; */
   margin-top: 30px;
   text-align: center;
@@ -420,7 +421,7 @@ nav .navlinks li a:active {
   scroll-margin-top: 60px; /* atau sebesar tinggi header */
 }
 
-.contact h1 {
+.contact h2 {
   margin: 30px;
   text-align: center;
   padding-bottom: 2%;
@@ -663,7 +664,7 @@ textarea {
     top: 90%;
     left: 235px;
   }
-  .about_content h1 {
+  .about_content h2 {
     font-size: 2rem;
   }
   .about_content p {
@@ -681,19 +682,19 @@ textarea {
     margin-bottom: 50px;
   }
   /* My Skill Section */
-  .myskill h1 {
+  .myskill h2 {
     font-size: 2rem;
   }
 
   /* Project Section */
-  .project h1 {
+  .project > h2 {
     font-size: 2rem;
   }
 
   /* Contact Section */
-  .contact h1 {
+  .contact h2 {
     font-size: 2rem;
-  }
+  } 
 
   .contact {
     display: flex;
